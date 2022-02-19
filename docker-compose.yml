@@ -1,0 +1,21 @@
+version: '2'
+services:
+  api:
+    container_name: api 
+    extends:
+      file: docker-compose.shared.yml
+      service: api
+    build:
+      args:
+        - DEBUG=1
+    networks:
+      - default_network
+    volumes:
+      - .:/vscode-dockerized-setup
+
+networks:
+  default_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

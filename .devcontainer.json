@@ -1,0 +1,11 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+    "name": "api",
+    "dockerComposeFile": [
+        "docker-compose.yml",
+    ],
+    "service": "api",
+    "workspaceFolder": "/vscode-dockerized-setup/src",
+    "shutdownAction": "none",
+    "extensions": []
+}
